@@ -1,25 +1,25 @@
 class Grit < Formula
   desc "GritQL is a query language for searching, linting, and modifying code"
   homepage "https://docs.grit.io/"
-  version "0.1.0-alpha.1721551528"
+  version "0.1.0-alpha.1721628561"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1721551528/marzano-aarch64-apple-darwin.tar.gz"
-      sha256 "7361ff4cb99c105fab05a2b847109658e9881762eae8358822d582c63429710c"
+      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1721628561/marzano-aarch64-apple-darwin.tar.gz"
+      sha256 "993ddd71eb4d4a8702fc4f126175e9a26f0a9f3ff6c4633d44f8a5f9b63e6b95"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1721551528/marzano-x86_64-apple-darwin.tar.gz"
-      sha256 "778c9dc9be2881e39fa7e04939d1f3b50b5b757fd3c383b41680cf73783c81ed"
+      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1721628561/marzano-x86_64-apple-darwin.tar.gz"
+      sha256 "e60d1f16fede95e81fb57e29ef1dfab7988682d85c7afdd23812474c7fc229d0"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1721551528/marzano-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "c522206d7a07edcf6d012689eae3f7a6a821c32fc46287949c8d313f9ddf5e9d"
+      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1721628561/marzano-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "5207608d115ddbb02035e1ffade2b40fd0b9d4dec5334289d336879ffa1bd12c"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1721551528/marzano-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "0c405d123d030a5b892355d6ac5ffe955282fc84af629b5a9a45257f2a46481d"
+      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1721628561/marzano-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "629a5f188e671f8aaf39b53d7137b085f083821c9765ee106ad79acb6df343e1"
     end
   end
   license "MIT"
