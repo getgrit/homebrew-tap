@@ -1,25 +1,25 @@
 class WorkflowRunner < Formula
   desc "This is the CLI-based workflow executor for Grit."
   homepage "https://docs.grit.io/language/overview"
-  version "0.1.0-alpha.1723707346"
+  version "0.1.0-alpha.1723765810"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1723707346/workflow-runner-aarch64-apple-darwin.tar.gz"
-      sha256 "e4e75abb0f0755867dc255dd47fa8ea64743dddd8f41618160d8b3385f5fb57a"
+      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1723765810/workflow-runner-aarch64-apple-darwin.tar.gz"
+      sha256 "a6e09df0c8a687a03273009aa5a063605bb7be2c20df5d86f3f51d27e6d50857"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1723707346/workflow-runner-x86_64-apple-darwin.tar.gz"
-      sha256 "b16f6f1c830b9b6347f2f62d497c3e515d9ad91db0e1597da8daaf80c781e366"
+      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1723765810/workflow-runner-x86_64-apple-darwin.tar.gz"
+      sha256 "b456b0fbd12465c08a35ba9764a465ea8bd0736e859e17cfe86de741b07d05c5"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1723707346/workflow-runner-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "93fa2c754942261c0dad4b97d3b907fd1893d2a7fe73782d39ac59a24d21cc35"
+      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1723765810/workflow-runner-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "28e0c969cfd4397bae06645998c81b649ac51e222c54abc1aad0dbc6792b6cf8"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1723707346/workflow-runner-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "ef1c34b59a89809f7554383281a96b49c4bea861efd3b6867fef4139f766529e"
+      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1723765810/workflow-runner-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "3af5855a2737e68aa7ce103c68fc8df80e307287ac669f00018a16d535d86457"
     end
   end
   license "UNLICENSED"
