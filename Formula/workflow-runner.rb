@@ -1,30 +1,26 @@
 class WorkflowRunner < Formula
   desc "This is the CLI-based workflow executor for Grit."
   homepage "https://docs.grit.io/language/overview"
-  version "0.1.0-alpha.1723765810"
+  version "0.1.0-alpha.1723927453"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1723765810/workflow-runner-aarch64-apple-darwin.tar.gz"
-      sha256 "a6e09df0c8a687a03273009aa5a063605bb7be2c20df5d86f3f51d27e6d50857"
+      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1723927453/workflow-runner-aarch64-apple-darwin.tar.gz"
+      sha256 "c8835e94cd5338a2522c1992cfac14b4d5823ab3a535082807bc9f6b405ee44f"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1723765810/workflow-runner-x86_64-apple-darwin.tar.gz"
-      sha256 "b456b0fbd12465c08a35ba9764a465ea8bd0736e859e17cfe86de741b07d05c5"
+      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1723927453/workflow-runner-x86_64-apple-darwin.tar.gz"
+      sha256 "9399dabea04eb4834fa18187d08d3610fc058f265b932d9a0f6c701f966be02b"
     end
   end
   if OS.linux?
-    if Hardware::CPU.arm?
-      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1723765810/workflow-runner-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "28e0c969cfd4397bae06645998c81b649ac51e222c54abc1aad0dbc6792b6cf8"
-    end
     if Hardware::CPU.intel?
-      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1723765810/workflow-runner-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "3af5855a2737e68aa7ce103c68fc8df80e307287ac669f00018a16d535d86457"
+      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1723927453/workflow-runner-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "d70ad9f4e7d122bf7b35747fb35176b9145f3ae30c4f142b7c817ac7dd49a708"
     end
   end
   license "UNLICENSED"
 
-  BINARY_ALIASES = {"aarch64-apple-darwin": {}, "aarch64-unknown-linux-gnu": {}, "x86_64-apple-darwin": {}, "x86_64-unknown-linux-gnu": {}}
+  BINARY_ALIASES = {"aarch64-apple-darwin": {}, "x86_64-apple-darwin": {}, "x86_64-unknown-linux-gnu": {}}
 
   def target_triple
     cpu = Hardware::CPU.arm? ? "aarch64" : "x86_64"
@@ -46,9 +42,6 @@ class WorkflowRunner < Formula
       bin.install "workflow-runner"
     end
     if OS.mac? && Hardware::CPU.intel?
-      bin.install "workflow-runner"
-    end
-    if OS.linux? && Hardware::CPU.arm?
       bin.install "workflow-runner"
     end
     if OS.linux? && Hardware::CPU.intel?
