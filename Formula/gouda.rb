@@ -1,30 +1,26 @@
 class Gouda < Formula
   desc "The server cli for grit"
   homepage "https://docs.grit.io"
-  version "0.1.0-alpha.1723765810"
+  version "0.1.0-alpha.1723927453"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1723765810/gouda-aarch64-apple-darwin.tar.gz"
-      sha256 "01d8a19cd55f2f72353830696022e9b9e32f4474216b6be6ebd17f5f404b9735"
+      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1723927453/gouda-aarch64-apple-darwin.tar.gz"
+      sha256 "8f29617dd4aa6df4c987783696ce75eb588fa0a214a0a8319c804364daa60e68"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1723765810/gouda-x86_64-apple-darwin.tar.gz"
-      sha256 "9ec697a5c3fb901e13dca1931889bc5adf9847a5667f2bc4dad71c229cf4bc85"
+      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1723927453/gouda-x86_64-apple-darwin.tar.gz"
+      sha256 "ddfbbe8e6e59bc521040eb6765be5897302a709a6d1e71202be7aa00d80c4731"
     end
   end
   if OS.linux?
-    if Hardware::CPU.arm?
-      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1723765810/gouda-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "a3d22c8f0984f976ea18b0f54c8780cc838971fbe2b22a478dcb5e2e00563471"
-    end
     if Hardware::CPU.intel?
-      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1723765810/gouda-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "7c863911dcc27237f77e594430a6d8f8c31576ad9bfd3ba556e2948f730fbc77"
+      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1723927453/gouda-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "e8649b7f7ed8490a2b0a6f6d0d7d936933cb904571345edf6e7849e851307d6a"
     end
   end
   license "MIT"
 
-  BINARY_ALIASES = {"aarch64-apple-darwin": {}, "aarch64-unknown-linux-gnu": {}, "x86_64-apple-darwin": {}, "x86_64-pc-windows-gnu": {}, "x86_64-unknown-linux-gnu": {}}
+  BINARY_ALIASES = {"aarch64-apple-darwin": {}, "x86_64-apple-darwin": {}, "x86_64-pc-windows-gnu": {}, "x86_64-unknown-linux-gnu": {}}
 
   def target_triple
     cpu = Hardware::CPU.arm? ? "aarch64" : "x86_64"
@@ -46,9 +42,6 @@ class Gouda < Formula
       bin.install "gouda"
     end
     if OS.mac? && Hardware::CPU.intel?
-      bin.install "gouda"
-    end
-    if OS.linux? && Hardware::CPU.arm?
       bin.install "gouda"
     end
     if OS.linux? && Hardware::CPU.intel?
