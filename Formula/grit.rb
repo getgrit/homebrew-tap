@@ -1,21 +1,21 @@
 class Grit < Formula
   desc "GritQL is a query language for searching, linting, and modifying code"
   homepage "https://docs.grit.io/"
-  version "0.1.0-alpha.1724386054"
+  version "0.1.0-alpha.1724794599"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1724386054/marzano-aarch64-apple-darwin.tar.gz"
-      sha256 "3d4b8f3340cc92712347e4dee47dc5af0a9c48c200f4297e495bcf8f5c885f96"
+      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1724794599/marzano-aarch64-apple-darwin.tar.gz"
+      sha256 "3d8619b9fd0a3b82e44f31e578b404ccd12f3f58d241ae102619d916fd16b431"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1724386054/marzano-x86_64-apple-darwin.tar.gz"
-      sha256 "25376abe054378d6fd13211f6433da4a7d90555173908e487ff1012c89c9ae2c"
+      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1724794599/marzano-x86_64-apple-darwin.tar.gz"
+      sha256 "239b6895d13860680193898cdfbf6b3acc3e7e1d3d74fc5debf321e6f4a3f306"
     end
   end
   if OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1724386054/marzano-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "34a0344d2c09bbcd6af2e06a1f2f16267f2f074318ad5c45eb483b5ed4bbfd48"
+      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1724794599/marzano-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "2f9d247a87ee87ab4ed9b0d0c38d1bd9b1ecd1e0501ff194c23a5471e4e9bbeb"
     end
   end
   license "MIT"
