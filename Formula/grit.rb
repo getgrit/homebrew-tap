@@ -1,26 +1,56 @@
 class Grit < Formula
   desc "GritQL is a query language for searching, linting, and modifying code"
   homepage "https://docs.grit.io/"
-  version "0.1.0-alpha.1724913831"
+  version "0.1.0-alpha.1724988485"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1724913831/marzano-aarch64-apple-darwin.tar.gz"
-      sha256 "f90ff6af3d2a9964024ac649f2dd4792ab66a4b06b57799335beb7b4704ba47e"
+      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1724988485/marzano-aarch64-apple-darwin.tar.gz"
+      sha256 "e631e8d92d227158d63cedfd071ee8a5ca2a79fa9853bb8635d44df440871f47"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1724913831/marzano-x86_64-apple-darwin.tar.gz"
-      sha256 "8a6d8608868c3eb2327fe81fc87da41112fd0b6fde9de18c208c04710e582b3b"
+      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1724988485/marzano-x86_64-apple-darwin.tar.gz"
+      sha256 "6e3b59bc489e3d74d895495bd4168c6e75312ade08963d16ca0345bff477c705"
     end
   end
   if OS.linux?
+    if Hardware::CPU.arm?
+      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1724988485/marzano-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "527cbcda292d1e7db40abcfbde46a842f4262cbdbc9102ef58a07dfc155b553e"
+    end
     if Hardware::CPU.intel?
-      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1724913831/marzano-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "239e59322a6661b50c711cff2364a1b26e9f38a56073f36c4c8f53c31edadfd6"
+      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1724988485/marzano-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "72a1f8281fc7bf4bd4b935c9d38c8d84184af46e3bc9868bbdabe472f4ef0aaf"
     end
   end
   license "MIT"
 
-  BINARY_ALIASES = {"aarch64-apple-darwin": {"marzano": ["grit"]}, "x86_64-apple-darwin": {"marzano": ["grit"]}, "x86_64-pc-windows-gnu": {"marzano.exe": ["grit.exe"]}, "x86_64-unknown-linux-gnu": {"marzano": ["grit"]}}
+  BINARY_ALIASES = {
+    "aarch64-apple-darwin":      {
+      marzano: [
+        "grit",
+      ],
+    },
+    "aarch64-unknown-linux-gnu": {
+      marzano: [
+        "grit",
+      ],
+    },
+    "x86_64-apple-darwin":       {
+      marzano: [
+        "grit",
+      ],
+    },
+    "x86_64-pc-windows-gnu":     {
+      "marzano.exe": [
+        "grit.exe",
+      ],
+    },
+    "x86_64-unknown-linux-gnu":  {
+      marzano: [
+        "grit",
+      ],
+    },
+  }.freeze
 
   def target_triple
     cpu = Hardware::CPU.arm? ? "aarch64" : "x86_64"
@@ -38,15 +68,10 @@ class Grit < Formula
   end
 
   def install
-    if OS.mac? && Hardware::CPU.arm?
-      bin.install "marzano"
-    end
-    if OS.mac? && Hardware::CPU.intel?
-      bin.install "marzano"
-    end
-    if OS.linux? && Hardware::CPU.intel?
-      bin.install "marzano"
-    end
+    bin.install "marzano" if OS.mac? && Hardware::CPU.arm?
+    bin.install "marzano" if OS.mac? && Hardware::CPU.intel?
+    bin.install "marzano" if OS.linux? && Hardware::CPU.arm?
+    bin.install "marzano" if OS.linux? && Hardware::CPU.intel?
 
     install_binary_aliases!
 
