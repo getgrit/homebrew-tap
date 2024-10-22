@@ -1,30 +1,28 @@
 class Gouda < Formula
   desc "The server cli for grit"
   homepage "https://docs.grit.io"
-  version "0.1.0-alpha.1729215008"
+  version "0.1.0-alpha.1729566713"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1729215008/gouda-aarch64-apple-darwin.tar.gz"
-      sha256 "65d3c97b72abb83fe20078c38c81914e518e853ecbd35a98614e4e1e2a4d630d"
+      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1729566713/gouda-aarch64-apple-darwin.tar.gz"
+      sha256 "fc3baa1405b8005eaacaaa156b5f6dd1cab84c8b0fc95fd7d4d28a1f3fce68db"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1729215008/gouda-x86_64-apple-darwin.tar.gz"
-      sha256 "572f2ae5c6d6f039c41e91ace02dd8e40f147828022868e73d5a284b80a3903d"
+      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1729566713/gouda-x86_64-apple-darwin.tar.gz"
+      sha256 "6b00256a8b3aea234168467c856e6715db723912d416dca002757be2c1302f66"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1729215008/gouda-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "e37323eb298f2753ba722ceebe02f7cc1bc92f4447e56a8f07808671e1119bc2"
+      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1729566713/gouda-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "fcfff7e1c863849523158cb4150bbe5e6d952686bc0cf14926fb38656d3de6de"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1729215008/gouda-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "9475b38afa23bd5aa1f42ca13406855efea30309fdf692d49941e8e4e2764f9d"
+      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1729566713/gouda-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "d0bc16a5752b978d457d98684d84cc7e34851ec14fb7b3f80410b6c4507e7fb8"
     end
   end
   license "MIT"
-
-  depends_on "libgit2"
 
   BINARY_ALIASES = {
     "aarch64-apple-darwin":      {},
