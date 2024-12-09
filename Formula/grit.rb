@@ -1,25 +1,25 @@
 class Grit < Formula
   desc "GritQL is a query language for searching, linting, and modifying code"
   homepage "https://docs.grit.io/"
-  version "0.1.0-alpha.1733706700"
+  version "0.1.0-alpha.1733756488"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1733706700/grit-aarch64-apple-darwin.tar.gz"
-      sha256 "90f05de03143af1c5dbd69e38e528a8521c59f2f945fc9b5cda97ed64b1051c4"
+      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1733756488/grit-aarch64-apple-darwin.tar.gz"
+      sha256 "8e97956d1178e8f49efc970fa3fbc7c5ed04fb0244db9bbff12d2d63ba1d04b1"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1733706700/grit-x86_64-apple-darwin.tar.gz"
-      sha256 "f52708296bdc422cf8f487df97e48c367d7cdaa61e9e2d2f5135d46f07cb2bbb"
+      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1733756488/grit-x86_64-apple-darwin.tar.gz"
+      sha256 "a076800d865a9dc3a6ba54d76067dbbd2d71b87cf4a557184d4b7d667e6b1acd"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1733706700/grit-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "aca98e9f788fe7c14062503340430d1c2d22ccdf32df67bff09a72efd2d9d521"
+      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1733756488/grit-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "e26cefa77869ed14e1055a04df0d3d38c2e805de0810a8997141038c8ff0ae89"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1733706700/grit-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "192d41b673b587f0499b531e9ebec7e455fec57583efbea1e6b468969e62dd81"
+      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1733756488/grit-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "79e14f4c2b40125715f968f7b6b1e91b2f5ccc47853c1e572f504815aeb4e7a5"
     end
   end
   license "MIT"
