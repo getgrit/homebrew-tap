@@ -1,25 +1,25 @@
 class Gouda < Formula
   desc "The server cli for grit"
   homepage "https://docs.grit.io"
-  version "0.1.0-alpha.1732682283"
+  version "0.1.0-alpha.1733706700"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1732682283/gouda-aarch64-apple-darwin.tar.gz"
-      sha256 "1e80437ad865f0cf0a6905d410da90758366805edbb0633b8bbffc0444f78fdc"
+      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1733706700/gouda-aarch64-apple-darwin.tar.gz"
+      sha256 "af37225a02b4c22769b05b62a33a8694c5c25fbb1a5872f8d4c3074215804416"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1732682283/gouda-x86_64-apple-darwin.tar.gz"
-      sha256 "f06146ab8850882f2b1bcf6cf2f778fd7fa3d5696b9ca571200f7adc7fa931bf"
+      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1733706700/gouda-x86_64-apple-darwin.tar.gz"
+      sha256 "135bec71a247e42373e8fd7bb061eee817d5c2d0491c17e3660eaaa212e48b46"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1732682283/gouda-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "f66990be14bb58a2fd68bfa253d3b6c99724de7e8d1f39abc43964463b1329ea"
+      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1733706700/gouda-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "9360a513ec6fba1f33ab05fe2da64d3813b3044dbe008e4c7794be4aa3d02199"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1732682283/gouda-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "54f0139304e14e77f47ca0172dfe8fc743a7647238fdbd4779c51f0afac05a8f"
+      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1733706700/gouda-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "a94010054a61e4aaa7cebeb9953af35e23283e11fb691b97d96f8861fb2b2043"
     end
   end
   license "MIT"
