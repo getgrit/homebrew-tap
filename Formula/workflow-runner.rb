@@ -1,20 +1,20 @@
 class WorkflowRunner < Formula
   desc "This is the CLI-based workflow executor for Grit."
   homepage "https://docs.grit.io/language/overview"
-  version "0.1.0-alpha.1738368619"
+  version "0.1.0-alpha.1738896512"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1738368619/workflow-runner-aarch64-apple-darwin.tar.gz"
-      sha256 "cf108658a70c85cdb77c76029d6295e84b69d0b6f13ddb7c978c901b14c4294e"
+      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1738896512/workflow-runner-aarch64-apple-darwin.tar.gz"
+      sha256 "0fbc6282e94de286bd97db9f9b3130e3d2626617107cac8bfdcd26f8823ba344"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1738368619/workflow-runner-x86_64-apple-darwin.tar.gz"
-      sha256 "9766a2351f12ae39382d6ff81aa39b7d459e97842ddf8cf4b0dfb150354d4c31"
+      url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1738896512/workflow-runner-x86_64-apple-darwin.tar.gz"
+      sha256 "d38f59ec0688aea6b9bc3bafa07b42e8efa6f863533f8d013d690940b09ad31d"
     end
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1738368619/workflow-runner-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "0abd54c73b05412004c8d065925d44f45aaae0bb5582569ddcd65ac4a481fec6"
+    url "https://github.com/getgrit/gritql/releases/download/v0.1.0-alpha.1738896512/workflow-runner-x86_64-unknown-linux-gnu.tar.gz"
+    sha256 "22593524ee26814f18b53a08e9c484cb1480a25e7322257580f802ad85614797"
   end
   license "UNLICENSED"
 
